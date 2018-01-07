@@ -1,0 +1,110 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize";
+
+$iron: #dadbdf;
+$pale-sky: #6b717f;
+$regent-grey: #808c99;
+$hopbush: #c69;
+$dawn-pink: #f2ece4;
+$nebula: #d2e1dd;
+$midnight-blue: #036;
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+ main {
+   flex: 1 0 auto;
+ }
+
+
+
+
+.dropdown-button{
+  //  background-color: red;
+  //  border:0;
+  //  padding: 0;
+  //  margin-left: 25px;
+  border: none;
+  outline: none;
+  //  display: none;
+}
+
+.dropdown-button:hover{
+  //  background-color: grey;
+   outline: none;
+ }
+
+/* User sign in and sign forms. */
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+.signInTitle{
+  text-align: center;
+}
+
+.signInBtn{
+  float: right;
+}
+
+.logInTitle{
+  text-align: center;
+}
+.logInBtn{
+  float: right;
+}
+
+#clouds{
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  // min-width: 100%;
+  // min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-100%);
+  // background: url("/clouds-2354580_1920.jpg");
+  // filter: brightness(95%);
+  opacity: .5;
+}

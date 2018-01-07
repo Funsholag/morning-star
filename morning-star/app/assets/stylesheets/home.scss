@@ -1,0 +1,104 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// #sky{
+//   position: fixed;
+//   top: 100%;
+//   left: 50%;
+//   min-width: 100%;
+//   min-height: 100%;
+//   width: auto;
+//   height: auto;
+//   z-index: -100;
+//   transform: translateX(-50%) translateY(-100%);
+//   background: url("dock-1846008_1920.jpg");
+//   background-size: cover;
+//   transition: 1s;
+//   filter: brightness(105%);
+//   opacity: .8;
+// }
+videhdo {
+  position: absolute;
+  // display: inline-block;
+  object-fit: contain;
+  // top: 100%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-100%);
+  // transform: translateX(-50%) translateY(-120%);
+  // background: url("722677679.mp4");
+  background-size: cover;
+  // transition: 600ms;
+  // opacity: .75;
+  // filter: brightness(85%);
+}
+
+#background {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-100%);
+  transform: translateX(-50%) translateY(-100%);
+  background: url(722677679.mp4) no-repeat;
+  background-size: cover;
+}
+
+
+
+#staggered-test li {
+  opacity: 0;
+}
+
+#image-test {
+  opacity: 0;
+}
+
+.blank{
+  height: 500px;
+}
+.wrapper{
+  background-color: white;
+  // position: absolute;
+  // height: 500px;
+  // width: 500px;
+}
+
+.mk-text-block{
+  text-align: center;
+}
+
+.blank-title{
+  // text-decoration: underline;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  letter-spacing: 3px;
+  display: block;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 6px black;
+}
+
+.separationLine{
+  width: 400px;
+  font-weight: bolder;
+  border: 2px solid white;
+}
+
+.blank-content{
+  color: white;
+}
+
+.wpb_wrapper{
+
+}
