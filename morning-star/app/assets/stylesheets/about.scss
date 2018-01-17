@@ -1,6 +1,9 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 $iron: #dadbdf;
 $pale-sky: #6b717f;
 $regent-grey: #808c99;
@@ -214,4 +217,84 @@ $midnight-blue: #036;
 
 .timeline-body > p + p {
   margin-top: 5px;
+}
+
+// Board Page
+.flush{
+  // background-color: $iron;
+  box-sizing: content-box;
+  // width: 300px;
+  // height: 100px;
+  // border: 10px solid;
+}
+.boardTitle{
+  text-align: center;
+  font-family: 'Kameron', serif;
+}
+
+#myModal{
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+#myModal1{
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.btn{
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.officers-bg {
+  padding-top: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // padding-bottom: 170px;
+  // margin-top: -25px;
+}
+
+.officers-box {
+  width: 90%;
+  background-color: darken($iron, 15);
+  border-radius: 20px;
+  margin: 0 auto;
+  // color: rgba($iron, .8);
+  // color: black;
+}
+
+  p {
+    letter-spacing: .5px;
+  }
+
+
+.officersTitle{
+  text-align: center;
+  color: black;
+  font-family: 'Kameron', serif;
+}
+
+.officersParagraph{
+  text-align: center;
+  color: black;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+// .card{
+//   margin-left: 10px;
+//   margin-bottom: 10px;
+// }
+
+.card-title{
+  color: black;
+}
+
+.card-text{
+  color: black;
+}
+
+.col-sm-3{
+  margin: 0 auto;
 }
