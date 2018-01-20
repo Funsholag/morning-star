@@ -9,4 +9,9 @@ function showMenu() {
      $('.menu').css("display", "block");
     $('.menu').addClass('animated bounceIn');
   }
-}
+};
+
+$(document).ready(function(){
+  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
+});
