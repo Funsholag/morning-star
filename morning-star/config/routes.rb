@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   get '/sermon' => "sermon#index"
+  get '/member' => "member#index"
 
   get '/about' => "about#index"
   get '/about/history' => "about#history"
