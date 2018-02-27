@@ -12,9 +12,7 @@ $dawn-pink: #f2ece4;
 $nebula: #d2e1dd;
 $midnight-blue: #036;
 
-.card {
-  overflow: visible;
-}
+
 .profile-pic {
   margin-top: -6em;
   z-index: 1;
@@ -220,6 +218,58 @@ $midnight-blue: #036;
 }
 
 // Board Page
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
+.cards-container {
+  column-break-inside: avoid;
+  .card {
+    display: inline-block;
+    overflow: visible;
+  }
+}
+
+@media #{$small-and-down} {
+  .cards-container {
+    @include column-count(1);
+  }
+}
+@media #{$medium-and-up} {
+  .cards-container {
+    @include column-count(2);
+  }
+}
+@media #{$large-and-up} {
+  .cards-container {
+    @include column-count(3);
+  }
+}
+
+
+/// Styles for demo
+.text-center {
+  text-align: center;
+}
+.main {
+  width: 450px;
+  margin: 30px;
+}
 .flush{
   // background-color: $iron;
   box-sizing: content-box;
@@ -232,15 +282,6 @@ $midnight-blue: #036;
   font-family: 'Kameron', serif;
 }
 
-#myModal{
-  margin: 0 auto;
-  margin-top: 10%;
-}
-
-#myModal1{
-  margin: 0 auto;
-  margin-top: 10%;
-}
 
 .btn{
   margin: 0 auto;
@@ -282,22 +323,22 @@ $midnight-blue: #036;
   font-family: 'Yantramanav', sans-serif;
 }
 
-// .card{
-//   margin-left: 10px;
-//   margin-bottom: 10px;
-// }
+.card{
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
 
-// .card-title{
-//   color: black;
-// }
-//
-// .card-text{
-//   color: black;
-// }
-//
-// .col-sm-3{
-//   margin: 0 auto;
-// }
+.card-title{
+  color: black;
+}
+
+.card-text{
+  color: black;
+}
+
+.col-sm-3{
+  margin: 0 auto;
+}
 
 .wrap {
   margin-top: 20px;

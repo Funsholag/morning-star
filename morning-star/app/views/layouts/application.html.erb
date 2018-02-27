@@ -74,7 +74,7 @@
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Event", event_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sermon", sermon_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Member", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navlink black-text" %></li>
               <% elsif controller_name == "about" && action_name == "index" %>
@@ -82,7 +82,7 @@
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
               <% else %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Member", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Event", event_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sermon", sermon_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
@@ -102,32 +102,34 @@
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <% elsif controller_name == "about" && action_name == "index" %>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <% else %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Member", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <% end %>
             </ul>
             <ul class="side-nav black-text" id="slide-out">
               <li><a href="/">Home</a></li>
               <% if user_signed_in? %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Member", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navlink black-text" %></li>
               <% elsif controller_name == "about" && action_name == "index" %>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Member", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <% else %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Member", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
               <% end %>
             </ul>
           </div>
@@ -142,7 +144,7 @@
         <nav class= "N/A transparent">© 2017 Ile Iye</nav>
       </div>
     </footer> -->
-    <footer class="page-footer">
+    <footer class="page-footer black">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
@@ -150,12 +152,11 @@
         <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
+        <h5 class="white-text"> About Us</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <li><a class="grey-text text-lighten-3" href="/about/mission">Mission</a></li>
+          <li><a class="grey-text text-lighten-3" href="/about/staff">Our Staff</a></li>
+          <li><a class="grey-text text-lighten-3" href="/about/history">History</a></li>
         </ul>
       </div>
     </div>
