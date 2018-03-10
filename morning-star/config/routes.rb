@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/sermon' => "sermon#index"
   get '/member' => "member#index"
+  get '/project' => "project#index"
 
   get '/about' => "about#index"
   get '/about/history' => "about#history"
