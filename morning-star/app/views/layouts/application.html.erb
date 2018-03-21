@@ -15,50 +15,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': false %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-    // $(document).ready(function(){
-    //   $(".dropdown-button").dropdown();
-    //   $(".button-collapse").sideNav({
-    //     menuWidth: 180,
-    //     closeOnClick: true,
-    //     edge: 'right'
-    //   });
-    // });
-
-    $(document).ready(function() {
-      var options = [{
-        selector: '#staggered-test',
-        offset: 300,
-        callback: function(el) {
-          Materialize.showStaggeredList($(el));
-        }
-      }, {
-        selector: '#image-test',
-        offset: 300,
-        callback: function(el) {
-          Materialize.fadeInImage($(el));
-        }
-      }];
-
-      Materialize.scrollFire(options);
-    });
-
-
-
-    // $(document).ready(function(){
-    //   $('.target').pushpin({
-    //     top: 0,
-    //     bottom: 1000,
-    //     offset: 0
-    //   });
-    // });
-
-    </script>
   </head>
 
   <body>
     <header>
-      <div class="nav-extended navbar-fixed nav-down">
+      <div class="nav-extended nav-down">
         <nav class= "N/A transparent">
           <div class="nav-wrapper black-text">
             <ul id="nav-mobile black-text" class="left hide-on-med-and-down black-text">
@@ -72,7 +33,7 @@
               <li><%= link_to "Home", root_path, :class => "navlink black-text" %></li>
               <% if user_signed_in? %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navlink black-text" %></li>
               <% elsif controller_name == "about" && action_name == "index" %>
@@ -80,7 +41,7 @@
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
               <% else %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
               <% end %>
@@ -91,39 +52,41 @@
 
             <a id="logo" href="/" class="brand-logo center black-text hide-on-med-and-down">
               Morning Star</a>
-            <a href="/" data-activates="mobile-demo" class="button-collapse black-text">
+            <a href="#" data-activates="mobile-demo" class="button-collapse black-text">
               <i class="responsive-image material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
               <% if user_signed_in? %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+
               <% elsif controller_name == "about" && action_name == "index" %>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+
               <% else %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
               <% end %>
             </ul>
-            <ul class="side-nav black-text" id="slide-out">
+            <ul class="side-nav black-text" id="mobile-demo">
               <li><a href="/">Home</a></li>
               <% if user_signed_in? %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => "navlink black-text" %></li>
               <% elsif controller_name == "about" && action_name == "index" %>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
               <% else %>
               <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Members", member_path, :class => "navlink black-text" %></li>
+              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
               <% end %>

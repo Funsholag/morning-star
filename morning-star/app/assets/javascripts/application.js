@@ -14,6 +14,19 @@
 
 //= require_tree .
 
+$(document).ready(function(){
+  $('.button-collapse').sideNav('show');
+  $(".button-collapse").sideNav({
+    menuWidth: 180,
+    closeOnClick: true
+  });
+});
+
+$(document).ready(function(){
+  $(".dropdown-button").dropdown();
+});
+
+
 $(function() {
 
   $(window).scroll(function() {
@@ -28,9 +41,7 @@ $(function() {
   });
 
 });
-$(document).ready(function(){
-  $(".dropdown-button").dropdown();
-});
+
 
 $(document).ready(function() {
   var options = [{
@@ -48,4 +59,12 @@ $(document).ready(function() {
   }];
 
   Materialize.scrollFire(options);
+});
+
+$(document).ready(function(){
+  $('.target').pushpin({
+    top: 0,
+    bottom: 1000,
+    offset: 0
+  });
 });
