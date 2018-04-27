@@ -3,13 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 ul.numbered-list {
   counter-reset: li;
-  list-style-type: none;
-  font-size: 14px;
-  line-height: 18px;
-  padding-left: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    // background-color: #333333;
+// }
+//
+// ul.numbered-list {
+//   counter-reset: li;
+//   list-style-type: none;
+//   font-size: 14px;
+//   line-height: 18px;
+//   padding-left: 10px;
 
   li {
     position: relative;
+    float: left;
     padding: 5px 0 5px 30px;
 
     &:before {
