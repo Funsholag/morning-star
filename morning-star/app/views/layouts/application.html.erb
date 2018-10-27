@@ -25,8 +25,7 @@
             <ul id="nav-mobile black-text" class="left hide-on-med-and-down black-text">
               <li>
                 <a class="dropdown-button black-text" data-activates="dropdown1" data-beloworigin="true">
-                <i class="responsive-image material-icons">book</i></a>
-                <!-- <img src="if_menu-alt_134216.png" alt=""> -->
+                <i class="responsive-image material-icons">home</i></a>
               </li>
             </ul>
             <ul id="dropdown1" class="dropdown-content black-text">
@@ -67,12 +66,22 @@
               <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
 
               <% else %>
-              <li><%= link_to "About", about_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
-              <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
+              <ul>
+                <li>
+                  <a class="dropdown-button black-text" data-activates="dropdown2" data-beloworigin="true" href="/about">About</a>
+                </li>
+                <li><%= link_to "Directory", member_path, :class => "navlink black-text" %></li>
+                <li><%= link_to "Join", new_user_registration_path, :class => "navlink black-text" %></li>
+                <li><%= link_to "Log In", new_user_session_path, :class => "navlink black-text" %></li>
+              </ul>
+              <ul id="dropdown2" class="dropdown-content black-text">
+                <li><a href="/about/mission">Mission</a></li>
+                <li><a href="/about/staff">Staff</a></li>
+                <li><a href="/about/mission">History</a></li>
+              </ul>
               <% end %>
             </ul>
+
             <ul class="side-nav black-text" id="mobile-demo">
               <li><a href="/">Home</a></li>
               <% if user_signed_in? %>
